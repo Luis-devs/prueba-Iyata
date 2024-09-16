@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba técnica Iyata</title>
+    <style>
+        .container {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .solucion,
+        .pruebas {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .form-datos {
+            text-align: start;
+            width: 600px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-datos button {
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="problema">
+            <h1>Problema</h1>
+            <p>Se requiere crear un algoritmo que busque dentro de una lista los números enteros ingresada a tiempo de ejecución que funcionara como base de datos para el ejercicio, el número más alto que sea inferior al número consultado y el número más
+                pequeño que sea superior al número consultado. El algoritmo debe ignorar los números de la base de datos que sean iguales al número a evaluar.</p>
+        </div>
+        <div class="solucion">
+            <h1>Solución</h1>
+            <form method="post" id="form-datos" class="form-datos">
+                <label for="tamano">Tamaño lista</label>
+                <input type="number" min="1" name="tamano" id="tamano" required>
+                <label for="numeros">Números separados por espacios</label>
+                <input type="text" name="numeros" id="numeros" required>
+                <button type="submit">Guardar en BD</button>
+            </form>
+        </div>
+        <div class="pruebas">
+            <h1>Probar</h1>
+            <form method="post" id="form-buscar" class="form-datos">
+                <label for="buscar">Número a evaluar</label>
+                <input type="number" name="buscar" required id="buscar">
+                <button type="submit">Evaluar</button>
+                <label for="resultado">Resultado</label>
+                <textarea name="resultado" id="resultado" readonly cols="7" rows="6"></textarea>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
